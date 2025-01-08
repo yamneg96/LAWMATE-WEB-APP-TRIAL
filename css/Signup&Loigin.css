@@ -1,0 +1,180 @@
+body {
+  background: linear-gradient(-45deg, #ccc, #786867);
+}
+
+/* Blur overlay effect for the home page */
+#home {
+  transition: filter 0.3s ease-in-out;
+}
+
+#home.blurred {
+  filter: blur(5px);
+}
+
+#signup,
+#login {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Smaller width for a compact view */
+  background-color: white;
+  padding: 20px 30px; /* Add padding for better spacing */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow for a modern look */
+  z-index: 1000;
+  border-radius: 12px; /* Rounder corners for a cleaner look */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth opening animation */
+  opacity: 0; /* Initially hidden */
+}
+
+#signup.active,
+#login.active {
+  display: block; /* Show the modal when active */
+  opacity: 1; /* Make it fully visible */
+  transform: translate(-50%, -50%) scale(1); /* Slight scaling effect for animation */
+}
+
+/* Modal backdrop for blur overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Responsive modal styling */
+@media (max-width: 768px) {
+  #signup,
+  #login {
+    width: 90%;
+  }
+}
+
+/* Container for login and signup pages */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Left side: Image section */
+.left-side {
+  flex: 1;
+  background-size: cover;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right side: Form section */
+.right-side {
+  flex: 1;
+  padding: 30px;
+  max-width: 600px;
+  margin-left: 20px;
+}
+
+/* Form fields */
+.input-field,
+#role {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #6a4c3c;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #786867;
+}
+
+/* Third-party login buttons */
+.third-party-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.third-party-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 32%;
+  transition: transform 0.3s;
+}
+
+.third-party-login button:hover {
+  transform: scale(1.05);
+}
+
+.icon-btn {
+  background-color: #f2ebe8;
+}
+
+.third-party-login button img {
+  margin-right: 10px;
+  width: 20px;
+}
+
+/* Redirect link */
+.redirect-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.redirect-link a {
+  color: #6a4c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redirect-link a:hover {
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* File upload styling */
+.file-upload {
+  margin-top: 15px;
+}

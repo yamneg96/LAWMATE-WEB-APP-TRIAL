@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/Signup&Loigin.css">
+  <script src="C:\Users\yamla\Desktop\LawMate-Web-App\Client\js\script.js"></script>
+</head>
+<body>
+  
+       <!-- Login Section -->
+       <section class="login-section" id="login">
+        <div class="container">
+            <div class="left-sidel">
+                <img src="../assets/img/justice-2755765_1280.jpg" alt="Login Background">
+            </div>
+    
+            <div class="right-side">
+                <form id="loginForm">
+                    <h2>Login</h2>
+    
+                    <!-- User Type Dropdown -->
+                    <div class="user-type">
+                        <label for="userType">I am a:</label>
+                        <select id="userType" class="input-field" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="client">Client</option>
+                            <option value="lawyer">Lawyer</option>
+                        </select>
+                    </div>
+    
+                    <input type="email" id="email" class="input-field" placeholder="Enter your Email" required>
+                    <input type="password" id="password" class="input-field" placeholder="Enter your Password" required>
+    
+                    <button type="submit" class="btn">Login</button>
+    
+                    <div class="third-party-login">
+                        <button type="button" class="icon-btn">
+                            <img src="../assets/img/icons8-google-50.png" alt="Google Logo"> Login with Google
+                        </button>
+                        <button type="button" class="icon-btn">
+                            <img src="../assets/img/icons8-facebook-logo-50.png" alt="Facebook Logo"> Login with Facebook
+                        </button>
+                        <button type="button" class="icon-btn">
+                            <img src="../assets/img/icons8-linkedin-logo-50.png" alt="LinkedIn Logo"> Login with LinkedIn
+                        </button>
+                    </div>
+    
+                    <div class="redirect-link">
+                        <p>Don't have an account? <a href="#signup">Sign Up here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
